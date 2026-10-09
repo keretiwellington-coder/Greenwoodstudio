@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Green Wood Studio | Cinematic Event Coverage in Awka</title>
+<meta name="description" content="Premium event coverage, drone videography, and custom media preservation in Awka, Anambra State.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#121212;--panel:#1a1a1a;--line:#2b2b2b;--text:#f4f4f2;--muted:#a9a9a4;--green:#1E3F20;--gold:#D4AF37;--radius:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Syne,Inter,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+section{padding:80px 0}
+.eyebrow{color:var(--gold);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+h2{font-size:clamp(1.8rem,5vw,3rem);margin-bottom:18px}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:600;font-size:.95rem;border:1px solid transparent;cursor:pointer;transition:.25s;font-family:inherit}
+.btn-gold{background:var(--gold);color:#121212}
+.btn-gold:hover{background:#e6c458;transform:translateY(-2px)}
+.btn-ghost{border-color:#555;color:var(--text);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(18,18,18,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Syne;font-weight:800;font-size:1.15rem}
+.logo span{color:var(--gold)}
+nav ul{display:flex;gap:26px;list-style:none;font-size:.9rem;color:var(--muted)}
+nav ul a:hover{color:var(--text)}
+@media(max-width:720px){nav ul{display:none}}
+
+/* hero */
+.hero{min-height:100svh;display:grid;align-items:center;position:relative;overflow:hidden;padding:110px 0 70px}
+.hero-bg{position:absolute;inset:0;display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:1fr 1fr;gap:3px;z-index:0}
+.hero-bg div{background-size:cover;background-position:center}
+.hero-bg .a{grid-row:span 2;background:linear-gradient(135deg,#2a3f2b,#0e1a0f)}
+.hero-bg .b{background:linear-gradient(135deg,#4a3b12,#1a1405)}
+.hero-bg .c{background:linear-gradient(135deg,#1f2a3a,#0b1018)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,18,18,.95) 20%,rgba(18,18,18,.55) 100%),linear-gradient(0deg,#121212 0%,transparent 40%);z-index:1}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(2.4rem,8vw,5.2rem);max-width:15ch;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{max-width:560px;color:#cfcfca;font-size:1.1rem;margin:22px 0 34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:720px){.hero-bg{grid-template-columns:1fr}.hero-bg .b,.hero-bg .c{display:none}.hero-bg .a{grid-row:auto}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-grid p{color:var(--muted);margin-bottom:16px}
+.stars{color:var(--gold);letter-spacing:4px;margin-bottom:10px}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.svc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:.3s}
+.svc:hover{border-color:var(--gold);transform:translateY(-4px)}
+.svc svg{width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.svc h3{font-size:1.02rem;margin-bottom:6px}
+.svc p{font-size:.85rem;color:var(--muted);margin:0}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px}}
+@media(max-width:420px){.services{grid-template-columns:1fr}}
+
+/* gallery */
+.tabs{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;margin:24px 0 28px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;padding:10px 20px;border-radius:999px;background:transparent;border:1px solid var(--line);color:var(--muted);cursor:pointer;font:500 .88rem Inter;transition:.2s}
+.tab.active,.tab:hover{background:var(--green);border-color:var(--gold);color:#fff}
+.masonry{columns:3 280px;column-gap:14px}
+.tile{break-inside:avoid;margin-bottom:14px;position:relative;overflow:hidden;border-radius:var(--radius);background:var(--panel);cursor:pointer}
+.tile .media{width:100%;transition:transform .6s ease;background-size:cover;background-position:center}
+.tile img,.tile video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.tile:hover .media{transform:scale(1.07)}
+.tile .cap{position:absolute;inset:auto 0 0 0;padding:40px 18px 16px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);opacity:0;transform:translateY(10px);transition:.35s}
+.tile:hover .cap,.tile:focus-within .cap{opacity:1;transform:none}
+.cap small{color:var(--gold);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem}
+.cap h3{font-size:1.05rem;margin-top:2px}
+.badge{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.6);border-radius:999px;font-size:.7rem;padding:4px 10px;z-index:2}
+@media(hover:none){.tile .cap{opacity:1;transform:none}}
+.hint{color:var(--muted);font-size:.85rem;margin-top:10px}
+
+/* process */
+.process{background:var(--panel)}
+.proc-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px}
+.timeline{position:relative;padding-left:34px;margin-top:30px}
+.timeline::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--green))}
+.step{position:relative;margin-bottom:34px}
+.step::before{content:attr(data-n);position:absolute;left:-34px;top:0;width:24px;height:24px;border-radius:50%;background:var(--gold);color:#121212;font-weight:700;font-size:.75rem;display:grid;place-items:center}
+.step h3{font-size:1.15rem;margin-bottom:4px}
+.step p{color:var(--muted);font-size:.93rem}
+.note{background:rgba(212,175,55,.1);border:1px solid var(--gold);color:#f1dc94;border-radius:var(--radius);padding:14px 18px;font-size:.92rem;margin-bottom:22px}
+form{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+label{display:block;font-size:.8rem;color:var(--muted);margin:0 0 6px;text-transform:uppercase;letter-spacing:.1em}
+input,select,textarea{width:100%;background:#1c1c1c;border:1px solid var(--line);border-radius:10px;padding:13px 14px;color:var(--text);font:inherit;margin-bottom:18px;transition:.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:110px;resize:vertical}
+form .btn{width:100%}
+.fine{font-size:.78rem;color:var(--muted);margin-top:12px;text-align:center}
+@media(max-width:860px){.proc-grid{grid-template-columns:1fr;gap:36px}}
+
+/* footer */
+footer{padding:70px 0 30px;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:44px}
+.info p{color:var(--muted);margin-bottom:14px}
+.info strong{color:var(--text);display:block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
+.socials{display:flex;gap:12px;margin-top:22px}
+.socials a{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:.25s}
+.socials a:hover{border-color:var(--gold);background:var(--green)}
+.socials svg{width:19px;height:19px;fill:none;stroke:var(--text);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:300px}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
+.copy{text-align:center;color:var(--muted);font-size:.8rem;margin-top:50px}
+@media(max-width:860px){.foot-grid{grid-template-columns:1fr}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;place-items:center;z-index:100;padding:20px}
+.lb.open{display:grid}
+.lb img,.lb video{max-height:86vh;border-radius:10px}
+.lb button{position:absolute;top:18px;right:22px;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#top" class="logo">Green Wood <span>Studio</span></a>
+  <ul>
+    <li><a href="#about">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#booking">Booking</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#booking" class="btn btn-gold" style="padding:10px 20px;font-size:.85rem">Book Now</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="a" data-bg="media/hero-1.jpg"></div>
+    <div class="b" data-bg="media/hero-2.jpg"></div>
+    <div class="c" data-bg="media/hero-3.jpg"></div>
+  </div>
+  <div class="wrap">
+    <p class="eyebrow">Awka · Anambra State</p>
+    <h1>Capturing Life’s Great Moments with <em>Cinematic Precision.</em></h1>
+    <p>Premium event coverage, drone videography, and custom media preservation in Awka, Anambra State.</p>
+    <div class="cta">
+      <a href="#booking" class="btn btn-gold">Book an Appointment</a>
+      <a href="#portfolio" class="btn btn-ghost">View Portfolio</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow">About the Studio</p>
+      <div class="stars" aria-label="5 star rated">★★★★★</div>
+      <h2>Every frame, handled with care.</h2>
+      <p>Green Wood Studio is a premium media and event coverage production house rooted in Awka. We have earned a five-star reputation locally by treating every wedding, burial, and corporate event as a story worth telling properly.</p>
+      <p>From the first consultation to the final delivery, we combine technical precision, cinematic eye, and honest service, so the moments you cannot repeat are preserved the way they deserve.</p>
+    </div>
+    <div class="services">
+      <div class="svc">
+        <svg viewBox="0 0 24 24"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <h3>Event Coverage</h3><p>High-end photography and videography for weddings, corporate events, and burials.</p>
+      </div>
+      <div class="svc">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 10V5M12 14v5M10 12H5M14 12h5"/><circle cx="5" cy="5" r="2.2"/><circle cx="19" cy="5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/></svg>
+        <h3>Aerial Media</h3><p>Professional drone piloting for cinematic, sweeping event perspectives.</p>
+      </div>
+      <div class="svc">
+        <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 17l3-4 2 2 3-4"/><circle cx="9" cy="8" r="1.2"/></svg>
+        <h3>Physical Media</h3><p>Custom, premium photo books and heirloom-quality framing services.</p>
+      </div>
+      <div class="svc">
+        <svg viewBox="0 0 24 24"><path d="M9 21h6M12 17v4M7 3h10l-1 9H8z"/><path d="M5 21h14"/></svg>
+        <h3>Onsite &amp; Studio</h3><p>Fully equipped setup for crisp, professional studio sessions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <p class="eyebrow">Selected Work</p>
+    <h2>The Portfolio</h2>
+    <div class="tabs" role="tablist" id="tabs">
+      <button class="tab active" data-f="all">All</button>
+      <button class="tab" data-f="wedding">Weddings</button>
+      <button class="tab" data-f="aerial">Aerial / Drone</button>
+      <button class="tab" data-f="cultural">Cultural &amp; Corporate</button>
+      <button class="tab" data-f="books">Photo Books</button>
+    </div>
+    <div class="masonry" id="gallery"></div>
+    <p class="hint">Tip: hover (or tap) a video tile for a silent preview.</p>
+  </div>
+</section>
+
+<section class="process" id="booking">
+  <div class="wrap proc-grid">
+    <div>
+      <p class="eyebrow">How It Works</p>
+      <h2>Simple from start to finish.</h2>
+      <div class="timeline">
+        <div class="step" data-n="1"><h3>Online Consult</h3><p>Tell us about your event. We confirm availability, discuss your vision, and share a clear quote.</p></div>
+        <div class="step" data-n="2"><h3>The Shoot</h3><p>Our crew arrives early and fully equipped, covering the day on the ground and in the air.</p></div>
+        <div class="step" data-n="3"><h3>Premium Delivery</h3><p>Colour-graded photos and films, plus optional photo books and framed prints made to last generations.</p></div>
+      </div>
+    </div>
+    <div>
+      <div class="note">⚠️ Note: Studio visits and event shoots require an appointment in advance.</div>
+      <form id="bookForm">
+        <label for="name">Your Name</label>
+        <input id="name" name="name" required autocomplete="name" placeholder="e.g. Chioma Okeke">
+        <label for="type">Event Type</label>
+        <select id="type" name="type" required>
+          <option value="">Select…</option>
+          <option>Wedding</option><option>Burial / Funeral</option><option>Corporate Event</option>
+          <option>Cultural Event</option><option>Drone Coverage</option><option>Studio Session</option>
+          <option>Photo Book / Framing</option>
+        </select>
+        <label for="date">Event Date</label>
+        <input id="date" name="date" type="date" required>
+        <label for="msg">Message</label>
+        <textarea id="msg" name="msg" placeholder="Venue, expected guests, anything we should know…"></textarea>
+        <button class="btn btn-gold" type="submit">Send Inquiry via WhatsApp</button>
+        <p class="fine">Opens WhatsApp with your details filled in. No account needed.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap foot-grid">
+    <div class="info">
+      <h2 style="font-size:1.8rem">Visit the Studio</h2>
+      <p><strong>Address</strong>No 12 Mgbajiaka Street, Awka 421104, Anambra.</p>
+      <p><strong>Hours</strong>Mon – Sat: 24 Hours<br>Sun: Closed</p>
+      <a class="btn btn-gold" id="callNow" href="tel:+2347018803214">📞 Call Now</a>
+      <div class="socials">
+        <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></a>
+        <a href="https://youtube.com/" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></a>
+        <a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 00-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a>
+      </div>
+    </div>
+    <div class="map">
+      <iframe loading="lazy" title="Green Wood Studio location" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Mgbajiaka+Street,+Awka,+Anambra,+Nigeria&output=embed"></iframe>
+    </div>
+  </div>
+  <p class="copy">© <span id="yr"></span> Green Wood Studio, Awka. All rights reserved.</p>
+</footer>
+
+<div class="lb" id="lb"><button aria-label="Close">×</button><div id="lbBody"></div></div>
+
+<script>
+/* ====== EDIT THESE ====== */
+const PHONE = "2347018803214"; // client's WhatsApp number, international format, no +
+const ITEMS = [
+  // cat: wedding | aerial | cultural | books   ·  src = photo path  ·  video = optional mp4 path
+  {cat:"wedding",  t:"Traditional Wedding, Awka", src:"media/w1.jpg", h:340, c:"#3b2a17"},
+  {cat:"aerial",   t:"Venue Flyover",            src:"media/a1.jpg", video:"media/a1.mp4", h:240, c:"#1d3326"},
+  {cat:"cultural", t:"Cultural Festival",        src:"media/c1.jpg", h:300, c:"#3a1f1f"},
+  {cat:"books",    t:"Heirloom Photo Book",      src:"media/b1.jpg", h:260, c:"#2a2a1a"},
+  {cat:"wedding",  t:"White Wedding Highlights", src:"media/w2.jpg", video:"media/w2.mp4", h:380, c:"#262033"},
+  {cat:"cultural", t:"Corporate Gala",           src:"media/c2.jpg", h:250, c:"#17283a"},
+  {cat:"aerial",   t:"Estate Reveal",            src:"media/a2.jpg", h:320, c:"#142a1d"},
+  {cat:"wedding",  t:"Couple Portraits",         src:"media/w3.jpg", h:290, c:"#33261a"},
+  {cat:"books",    t:"Framed Memories",          src:"media/b2.jpg", h:330, c:"#2b1f2e"}
+];
+/* ======================== */
+
+const g = document.getElementById('gallery');
+const label = {wedding:"Weddings", aerial:"Aerial / Drone", cultural:"Cultural & Corporate", books:"Photo Books"};
+
+ITEMS.forEach(it=>{
+  const d = document.createElement('div');
+  d.className = 'tile'; d.dataset.cat = it.cat; d.tabIndex = 0;
+  d.innerHTML = `<div class="media" style="height:${it.h}px;background:linear-gradient(135deg,${it.c},#0c0c0c)">
+      <img loading="lazy" decoding="async" alt="${it.t}" src="${it.src}" onerror="this.remove()">
+    </div>
+    ${it.video?'<span class="badge">▶ Video</span>':''}
+    <div class="cap"><small>${label[it.cat]}</small><h3>${it.t}</h3></div>`;
+  if(it.video){
+    let v;
+    const start = ()=>{ if(v) return; v=document.createElement('video');
+      v.src=it.video; v.muted=true; v.loop=true; v.playsInline=true; v.preload='none';
+      d.querySelector('.media').appendChild(v); v.play().catch(()=>{}); };
+    const stop = ()=>{ if(v){v.remove(); v=null;} };
+    d.addEventListener('mouseenter',start); d.addEventListener('mouseleave',stop);
+    d.addEventListener('touchstart',start,{passive:true});
+  }
+  d.addEventListener('click',()=>openLB(it));
+  g.appendChild(d);
+});
+
+document.getElementById('tabs').addEventListener('click',e=>{
+  const b = e.target.closest('.tab'); if(!b) return;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t===b));
+  g.querySelectorAll('.tile').forEach(t=>{
+    t.style.display = (b.dataset.f==='all'||t.dataset.cat===b.dataset.f)?'':'none';
+  });
+});
+
+const lb = document.getElementById('lb'), lbBody = document.getElementById('lbBody');
+function openLB(it){
+  lbBody.innerHTML = it.video
+    ? `<video src="${it.video}" controls autoplay playsinline></video>`
+    : `<img src="${it.src}" alt="${it.t}">`;
+  lb.classList.add('open');
+}
+lb.addEventListener('click',e=>{ if(e.target===lb||e.target.tagName==='BUTTON'){lb.classList.remove('open');lbBody.innerHTML='';} });
+
+/* hero collage: load background images lazily */
+document.querySelectorAll('[data-bg]').forEach(el=>{
+  const i = new Image(); i.onload=()=>el.style.backgroundImage=`url(${el.dataset.bg})`; i.src = el.dataset.bg;
+});
+
+/* booking form → WhatsApp */
+const d = document.getElementById('date'); d.min = new Date().toISOString().split('T')[0];
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const text = `Hello Green Wood Studio,%0A%0AName: ${encodeURIComponent(f.get('name'))}%0AEvent: ${encodeURIComponent(f.get('type'))}%0ADate: ${encodeURIComponent(f.get('date'))}%0AMessage: ${encodeURIComponent(f.get('msg')||'-')}`;
+  window.open(`https://wa.me/${PHONE}?text=${text}`,'_blank');
+});
+document.getElementById('callNow').href = 'tel:+'+PHONE;
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
